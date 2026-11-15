@@ -1,0 +1,22 @@
+{
+  "skills": [
+    {
+      "name": "dev-docs",
+      "version": "1",
+      "files": [
+        "SKILL.md",
+        "references/anti-rot-principles.md",
+        "references/migration-playbook.md",
+        "scripts/verify_docs.py",
+        "templates/README.template.md",
+        "templates/AGENTS.template.md",
+        "templates/STATUS.template.md",
+        "templates/BUGS.template.md",
+        "templates/CHANGELOG.template.md",
+        "templates/ADR.template.md",
+        "templates/SPEC-INDEX.template.md",
+        "templates/SPEC-ITEM.template.md"
+      ]
+    }
+  ]
+}
