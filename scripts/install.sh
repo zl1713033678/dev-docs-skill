@@ -13,17 +13,28 @@ install_to() {
   echo "[OK] Installed skill 'dev-docs' -> ${dest_root}/dev-docs"
 }
 
+install_antigravity() {
+  local plugin_dest="${HOME}/.gemini/config/plugins/dev-docs-skill"
+  mkdir -p "${plugin_dest}/assets"
+  cp "${REPO_ROOT}/plugin.json" "${plugin_dest}/plugin.json"
+  cp "${REPO_ROOT}/assets/logo.svg" "${plugin_dest}/assets/logo.svg"
+  install_to "${plugin_dest}/skills"
+  echo "[OK] Installed Antigravity plugin 'dev-docs-skill' -> ${plugin_dest}"
+}
+
 case "${TARGET}" in
-  opencode) install_to "${HOME}/.config/opencode/skills" ;;
-  claude)   install_to "${HOME}/.claude/skills" ;;
-  agents)   install_to "${HOME}/.agents/skills" ;;
+  opencode)    install_to "${HOME}/.config/opencode/skills" ;;
+  claude)      install_to "${HOME}/.claude/skills" ;;
+  agents)      install_to "${HOME}/.agents/skills" ;;
+  antigravity) install_antigravity ;;
   all)
     install_to "${HOME}/.config/opencode/skills"
     install_to "${HOME}/.claude/skills"
     install_to "${HOME}/.agents/skills"
+    install_antigravity
     ;;
   *)
-    echo "Usage: $0 [opencode|claude|agents|all]" >&2
+    echo "Usage: $0 [opencode|claude|agents|antigravity|all]" >&2
     exit 1
     ;;
 esac

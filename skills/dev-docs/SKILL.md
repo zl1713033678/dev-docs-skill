@@ -1,5 +1,5 @@
 ---
-name: Dev Docs (专业开发文档编制与防膨胀治理)
+name: dev-docs
 description: Use this skill whenever creating, auditing, reorganizing, or maintaining project documentation, architecture decision records (ADR), feature specs/RFCs, bug tracking ledgers, changelogs, or project progress handoffs (STATUS/HANDOFF). Applies Docs-as-Code, Code-First Truth Matrix (L1-L4), Spec Gate, and Red-Green Bug lifecycle rules.
 license: MIT
 ---

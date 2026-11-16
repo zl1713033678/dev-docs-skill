@@ -1,0 +1,14 @@
+{
+  "name": "dev-docs-skill",
+  "displayName": "Dev Docs (开发文档治理)",
+  "version": "1.0.0",
+  "logo": "assets/logo.svg",
+  "description": "专业开发文档编制与防膨胀治理技能：建立 Docs-as-Code 五层文档体系，提供代码真实度矩阵（L1~L4）、Spec Gate 特性孵化、红绿排障同步闭环与自动化体检脚本。",
+  "author": "zl1713033678",
+  "repository": "https://github.com/zl1713033678/dev-docs-skill",
+  "suggestedPrompts": [
+    "审计当前项目代码与现有文档，备份旧文档后按五层规范无损拆分重构",
+    "为当前项目初始化标准五层开发文档体系与 AGENTS.md 工程红线",
+    "把当前规划方案写入 docs/specs/ 孵化器（暂不写代码）"
+  ]
+}

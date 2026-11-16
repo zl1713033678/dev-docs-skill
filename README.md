@@ -1,6 +1,6 @@
 # dev-docs-skill · 专业开发文档编制与防膨胀治理 Skill
 
-一套适用于 **OpenCode V2**、**Claude Code** 及通用 **Agent Skills (`SKILL.md`)** 生态的工业级软件工程文档治理技能包（Skill ID：`dev-docs`）。
+一套适用于 **Antigravity**、**OpenCode V2**、**Claude Code** 及通用 **Agent Skills (`SKILL.md`)** 生态的工业级软件工程文档治理技能包（Skill ID：`dev-docs`）。
 
 核心目标：**终结“只追加不重构的巨石 `HANDOFF.md`”、“代码与文档三天脱节”以及“把模拟 Demo 标成已完成”三大研发痛点**，建立轻量、诚实、可自动体检的 **Docs-as-Code 五层文档体系**。
 
@@ -50,14 +50,14 @@
 }
 ```
 
-### 方式 3：一键安装脚本（支持 OpenCode / Claude Code / `.agents`）
+### 方式 3：一键安装脚本（支持 Antigravity / OpenCode / Claude Code / `.agents`）
 ```powershell
-# Windows PowerShell（可选参数: opencode | claude | agents | all）
-pwsh -NoProfile -File .\scripts\install.ps1 -Target all
+# Windows PowerShell（可选参数: antigravity | opencode | claude | agents | all）
+pwsh -NoProfile -File .\scripts\install.ps1 -Target antigravity
 ```
 ```bash
 # macOS / Linux
-bash ./scripts/install.sh all
+bash ./scripts/install.sh antigravity
 ```
 
 ---
@@ -77,6 +77,8 @@ bash ./scripts/install.sh all
 
 ```text
 dev-docs-skill/
+├── plugin.json                              # Antigravity 插件元数据清单
+├── assets/logo.svg                          # 插件矢量图标（深/浅主题适配）
 ├── scripts/{install.ps1, install.sh}        # Windows / macOS / Linux 一键安装脚本
 └── skills/
     ├── index.json                           # OpenCode V2 HTTP Catalog 索引清单

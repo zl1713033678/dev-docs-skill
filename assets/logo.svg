@@ -1,0 +1,49 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dd_back" x1="34" y1="54" x2="174" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34A853"/>
+      <stop offset="100%" stop-color="#0F9D58"/>
+    </linearGradient>
+    <linearGradient id="dd_back_sheen" x1="34" y1="54" x2="112" y2="142" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#81C995" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#34A853" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="dd_front" x1="66" y1="28" x2="222" y2="204" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5BB2FF"/>
+      <stop offset="52%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#1967D2"/>
+    </linearGradient>
+    <linearGradient id="dd_fold" x1="174" y1="28" x2="222" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E8F0FE"/>
+      <stop offset="100%" stop-color="#8AB4F8"/>
+    </linearGradient>
+    <linearGradient id="dd_amber" x1="160" y1="155" x2="194" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDD663"/>
+      <stop offset="100%" stop-color="#FBBC04"/>
+    </linearGradient>
+    <clipPath id="dd_back_clip">
+      <rect x="34" y="54" width="140" height="174" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- Back layered architecture/blueprint sheet (Emerald Green) -->
+  <rect x="34" y="54" width="140" height="174" rx="24" fill="url(#dd_back)"/>
+  <rect x="34" y="54" width="140" height="174" rx="24" fill="url(#dd_back_sheen)"/>
+
+  <!-- Concentric tonal overlap band clipped cleanly inside the back sheet -->
+  <path d="M58 54H174V212H84C69.6406 212 58 200.359 58 186V54Z" fill="#0D652D" fill-opacity="0.28" clip-path="url(#dd_back_clip)"/>
+
+  <!-- Front Docs-as-Code document sheet (Google Blue) -->
+  <path d="M90 28H174L222 76V180C222 193.255 211.255 204 198 204H90C76.7452 204 66 193.255 66 180V52C66 38.7452 76.7452 28 90 28Z" fill="url(#dd_front)"/>
+
+  <!-- Folded top-right corner -->
+  <path d="M174 28L222 76H188C180.268 76 174 69.732 174 62V28Z" fill="url(#dd_fold)"/>
+
+  <!-- Code brackets < > -->
+  <path d="M118 86L94 108L118 130" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M164 86L188 108L164 130" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Document structure bar + Amber status/Truth-Matrix pill -->
+  <rect x="94" y="155" width="56" height="15" rx="7.5" fill="#FFFFFF" fill-opacity="0.94"/>
+  <rect x="160" y="155" width="34" height="15" rx="7.5" fill="url(#dd_amber)"/>
+</svg>

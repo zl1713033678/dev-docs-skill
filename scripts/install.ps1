@@ -1,5 +1,5 @@
 param(
-    [ValidateSet("opencode", "claude", "agents", "all")]
+    [ValidateSet("opencode", "claude", "agents", "antigravity", "all")]
     [string]$Target = "opencode"
 )
 
@@ -15,6 +15,18 @@ function Copy-SkillDir([string]$DestRoot) {
     Write-Host "[OK] Installed skill 'dev-docs' -> $Dest" -ForegroundColor Green
 }
 
+function Install-AntigravityPlugin {
+    $PluginDest = Join-Path $HOME ".gemini\config\plugins\dev-docs-skill"
+    $AssetsDest = Join-Path $PluginDest "assets"
+    $SkillsDest = Join-Path $PluginDest "skills"
+
+    New-Item -ItemType Directory -Force -Path $AssetsDest | Out-Null
+    Copy-Item -Force -Path (Join-Path $RepoRoot "plugin.json") -Destination (Join-Path $PluginDest "plugin.json")
+    Copy-Item -Force -Path (Join-Path $RepoRoot "assets\logo.svg") -Destination (Join-Path $AssetsDest "logo.svg")
+    Copy-SkillDir $SkillsDest
+    Write-Host "[OK] Installed Antigravity plugin 'dev-docs-skill' -> $PluginDest" -ForegroundColor Green
+}
+
 if ($Target -in @("opencode", "all")) {
     Copy-SkillDir "$HOME\.config\opencode\skills"
 }
@@ -23,4 +35,7 @@ if ($Target -in @("claude", "all")) {
 }
 if ($Target -in @("agents", "all")) {
     Copy-SkillDir "$HOME\.agents\skills"
+}
+if ($Target -in @("antigravity", "all")) {
+    Install-AntigravityPlugin
 }
